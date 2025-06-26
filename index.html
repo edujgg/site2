@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Data e Hora</title>
+</head>
+<body>
+    <!-- Parágrafo vazio para exibir a data e hora -->
+    <p id="dataHora"></p>
+
+    <!-- Botão para atualizar a data e hora -->
+    <button onclick="atualizarDataHora()">Mostrar Data e Hora</button>
+
+    <!-- Script JavaScript -->
+    <script>
+        // Função para mostrar a data e hora atual
+        function atualizarDataHora() {
+            // Obtém a data e hora atuais
+            var agora = new Date();
+
+            // Formata a data e hora em uma string legível
+            var dataFormatada = agora.toLocaleString();
+
+            // Seleciona o elemento pelo ID
+            var paragrafo = document.getElementById("dataHora");
+
+            // Exibe a data e hora no parágrafo
+            paragrafo.textContent = "Data e Hora Atual: " + dataFormatada;
+        }
+    </script>
+</body>
+</html>
